@@ -1,1 +1,0 @@
-# bsoyka.github.io

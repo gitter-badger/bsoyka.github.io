@@ -3,31 +3,59 @@
     <head>
         <title>Tic-Tac-Toe AI</title>
         <link rel = 'stylesheet' type = 'text/css' href = 'styles/ui.css'>
+        <link rel = 'apple-touch-icon' href = 'imgs/icon.PNG'>
+        <meta name="apple-mobile-web-app-title" content="Tic-Tac-Toe">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
         <div class = 'main-container'>
-            <div class="dropdown-menu">
-                <div class="selection">
-                    <h1>Choose a players configuration ...</h1>
+            <div class = 'board'>
+                <!-- data-indx following cell divs represents cell index in 1D array representation -->
+                <div class='cell' data-indx = "0" ></div>
+                <div class='cell' data-indx = "1" ></div>
+                <div class='cell' data-indx = "2" ></div>
+                <div class='cell' data-indx = "3" ></div>
+                <div class='cell' data-indx = "4" ></div>
+                <div class='cell' data-indx = "5" ></div>
+                <div class='cell' data-indx = "6" ></div>
+                <div class='cell' data-indx = "7" ></div>
+                <div class='cell' data-indx = "8" ></div>
+            </div>
+
+            <div class = 'control'>
+                <!-- div.intial displays the starting controls -->
+                <div class = 'intial'>
+                    <div class = 'difficulty'>
+                        <span class = 'level not-selected' id = "blind">Blind</span>
+                        <span class = 'level not-selected' id = "novice">Novice</span>
+                        <span class = 'level not-selected' id = "master">Master!</span>
+                    </div>
+
+                    <div class='start'> Start </div>
                 </div>
 
-                <div class="items">
-                    <h1 data-xlevel = "master" data-olevel = "blind">X: Master vs. O: Blind</h1>
-                    <h1 data-xlevel = "master" data-olevel = "novice">X: Master vs. O: Novice</h1>
-                    <h1 data-xlevel = "novice" data-olevel = "blind">X: Novice vs. O: Blind</h1>
-                    <h1 data-xlevel = "novice" data-olevel = "novice">X: Novice vs. O: Novice</h1>
+                <!-- div.ingame displays in-game messages and controls -->
+                <div class = 'ingame' id="human">It's your turn ...</div>
+                <div class = 'ingame' id="ai">
+                    <img src = "imgs/robot.png" id = "robot" class = "robot" />
+                    <p>Wait for it ...</p>
+                </div>
+                <div class = 'ingame' id="won">
+                    <p>You won!</p>
+                    <button type="button" onclick="location.reload();">Start over</button>
+                </div>
+                <div class = 'ingame' id="lost">
+                    <p>You lost!</p>
+                    <button type="button" onclick="location.reload();">Start over</button>
+                </div>
+                <div class = 'ingame' id="draw">
+                    <p>It's a draw.</p>
+                    <button type="button" onclick="location.reload();">Start over</button>
                 </div>
             </div>
-            <h2>Games Played : <span id="count">0</span>/1000</h2>
-            <h2>Games Won: <span id="wonCount">0</span></h2>
-            <h2>&nbsp &nbsp &nbsp &nbsp Within 3 moves: <span id="won3">0</span></h2>
-            <h2>&nbsp &nbsp &nbsp &nbsp Within 4 moves: <span id="won4">0</span></h2>
-            <h2>&nbsp &nbsp &nbsp &nbsp Within 5 moves: <span id="won5">0</span></h2>
-            <h2>Games Lost: <span id="lostCount">0</span></h2>
-            <h2>Games Draw: <span id="drawCount">0</span></h2>
-
-            <div class='start'> Start Playing</div>
         </div>
 
         <script src = "scripts/jquery-1.10.1.min.js"></script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compare MAD - Ben's Addons</title>
+    <link rel="stylesheet" href="//b.soyka.ml/styles.css">
+  </head>
+  <body>
+    <h2>Compare MAD Sheets Function</h2>
+    <div class="code">
+      function compareMAD(setABeginning, setA, setBBeginning, setB) {<br>
+      &nbsp;&nbsp;if(setABeginning == "" || setBBeginning == "") {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;var result = "Please enter data in both sets.";<br>
+      &nbsp;&nbsp;} else {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;if(setA > setB) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var result = "Set B has less variability.";<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;} else if(setA < setB) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var result = "Set A has less variability.";<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;} else if(setA == setB) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var result = "Sets A and B have the same variability.";<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var result = "Oops!  Something went wrong.";<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+      &nbsp;&nbsp;}<br>
+      &nbsp;&nbsp;return result;<br>
+      }
+    </div>
+  </body>
+</html>

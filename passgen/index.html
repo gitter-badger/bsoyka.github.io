@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Password Generator</title>
-    <link rel="stylesheet" href="../styles.css"s>
+    <link rel="stylesheet" href="../styles.css" s>
 </head>
+
 <body>
-    <form name="passGen">
+    <form name="passGen" id="passGen">
         <input type="text" name="output" id="output">
         <input type="button" value="Generate new password" onclick="populateForm(this.form.output, this.form.passwordLength.value);">
-        <br>
-        Password Length:
+        <br> Password Length:
         <input type="text" name="passwordLength" value="8" size="3" maxlength="3" required="required">
+        <br> Format:
+        <br>
+        <input type="checkbox" name="format" value="numbers" checked>Numbers
+        <br>
+        <input type="checkbox" name="format" value="lowercase" checked>Lowercase letters
+        <br>
+        <input type="checkbox" name="format" value="uppercase" checked>Uppercase letters
+        <br>
+        <input type="checkbox" name="format" value="special" checked>Special characters
     </form>
     <script src="main.js"></script>
 </body>
+
 </html>
